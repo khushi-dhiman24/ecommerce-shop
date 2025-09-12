@@ -4,6 +4,7 @@ import ProductOfferCarousel from "../components/ProductOffercarousel";
 import SaleOnCategories from "../components/SaleOnCategories";
 import CategoryCarousel from "../components/CategoryCarousel";
 
+
 export default function HomePage() {
   const hotDeals = [
     { id: 1, name: "Summer T-Shirt", image: "/images/tshirt.jpg", discount: "20% Off" },
