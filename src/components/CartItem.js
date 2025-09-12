@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function CartItem({ item }) {
   return (
     <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow">
-      {/* Left: Product Image + Details */}
       <div className="flex items-center space-x-4">
         <Image
           src={item.image}
@@ -19,17 +18,12 @@ export default function CartItem({ item }) {
           <p className="text-gray-600">${item.price} × {item.quantity}</p>
         </div>
       </div>
-
-      {/* Right: Total Price + Quantity Controls */}
       <div className="flex items-center space-x-4">
-        {/* Quantity Controls */}
         <div className="flex items-center space-x-2">
           <button className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
           <span className="px-3">{item.quantity}</span>
           <button className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
         </div>
-
-        {/* Total Price */}
         <p className="font-bold text-lg">${item.price * item.quantity}</p>
       </div>
     </div>

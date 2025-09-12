@@ -12,7 +12,6 @@ import "swiper/css/autoplay";
 export default function TodayOffersSlider({ products }) {
   const [isMounted, setIsMounted] = useState(false);
 
-  // Ensure Swiper renders only on client to avoid hydration issues
   useEffect(() => {
     setIsMounted(true);
   }, []);

@@ -27,7 +27,7 @@ export default function Navbar() {
 
         {/* Login Button */}
         <Link
-          href="/login"
+          href="/admin"
           className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
         >
           Login

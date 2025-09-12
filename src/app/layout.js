@@ -1,6 +1,6 @@
-// src/app/layout.js
+
 import "./globals.css";
-import Navbar from "../components/Navbar"; // ✅ default import
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata = {
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar /> {/* ✅ now valid */}
+        <Navbar /> 
         <main className="container mx-auto px-4 py-6">{children}</main>
         <Footer />
       </body>
