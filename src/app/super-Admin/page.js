@@ -2,17 +2,17 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, ShoppingBag, Store, Settings } from "lucide-react";
-
+import AdminFooter from "../../components/AdminFooter";
+import AdminNavbar from "../../components/Adminnavbar";
 export default function SuperAdminPage() {
   return (
     <div className="min-h-screen bg-gray-100 p-8">
+      <AdminNavbar/>
       {/* Title */}
-      <h1 className="text-4xl font-bold mb-8 text-gray-800">
-        Super Admin Dashboard
-      </h1>
+      
 
       {/* Grid for stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-15 mt-10 h-20">
         <Card className="shadow-md rounded-2xl p-4 bg-white">
           <CardContent className="flex items-center space-x-4">
             <Users className="w-10 h-10 text-blue-600" />
@@ -55,7 +55,7 @@ export default function SuperAdminPage() {
       </div>
 
       {/* Table section */}
-      <div className="bg-white shadow-md rounded-2xl p-6">
+      <div className="bg-white shadow-md rounded-2xl p-6 pt-10">
         <h2 className="text-2xl font-semibold mb-4">Recent Activities</h2>
         <table className="w-full border-collapse">
           <thead>
@@ -68,19 +68,19 @@ export default function SuperAdminPage() {
           </thead>
           <tbody>
             <tr className="border-b">
-              <td className="p-3">#001</td>
+              <td className="p-3">001</td>
               <td className="p-3">John Doe</td>
               <td className="p-3 text-green-600">Added Product</td>
               <td className="p-3">12 Sep 2025</td>
             </tr>
             <tr className="border-b">
-              <td className="p-3">#002</td>
+              <td className="p-3">002</td>
               <td className="p-3">Jane Smith</td>
               <td className="p-3 text-red-600">Deleted User</td>
               <td className="p-3">11 Sep 2025</td>
             </tr>
             <tr>
-              <td className="p-3">#003</td>
+              <td className="p-3">003</td>
               <td className="p-3">Seller XYZ</td>
               <td className="p-3 text-blue-600">Updated Settings</td>
               <td className="p-3">10 Sep 2025</td>
@@ -88,6 +88,7 @@ export default function SuperAdminPage() {
           </tbody>
         </table>
       </div>
+      <AdminFooter/>
     </div>
   );
 }

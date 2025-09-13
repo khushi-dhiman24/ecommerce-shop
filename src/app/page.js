@@ -3,6 +3,8 @@
 import ProductOfferCarousel from "../components/ProductOffercarousel";
 import SaleOnCategories from "../components/SaleOnCategories";
 import CategoryCarousel from "../components/CategoryCarousel";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 
 export default function HomePage() {
@@ -57,12 +59,14 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className=" flex flex-col bg-gray-50 h-full">
+      <Navbar/>
       <div className="flex-grow">
         <ProductOfferCarousel products={hotDeals} />
         <SaleOnCategories categories={categories} />
         <CategoryCarousel categories={categories} />
       </div>
+      <Footer/>
     </div>
   );
 }
